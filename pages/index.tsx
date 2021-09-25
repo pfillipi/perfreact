@@ -1,6 +1,11 @@
 import { FormEvent, useCallback, useState } from "react";
 import { SearchResults } from "../components/SearchResults";
 
+type Results = {
+  totalPrice: number;
+  data: any[];
+};
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
