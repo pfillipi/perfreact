@@ -15,7 +15,11 @@ export default function Home() {
     const response = await fetch(`http://localhost:3333/products?q=${search}`);
     const data = await response.json();
 
-    setResults(data);
+    const totalPrice = data.reduce((total, product) => {
+      return total + product.price;
+    }, 0);
+
+    setResults({ totalPrice, data });
   }
 
   const addToWishlist = useCallback(async (id: number) => {
