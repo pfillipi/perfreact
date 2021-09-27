@@ -26,8 +26,8 @@ export function SearchResults({
       {results.map((product) => {
         return (
           <ProductItem
-            product={product}
             key={product.id}
+            product={product}
             onAddToWishlist={onAddToWishlist}
           />
         );
