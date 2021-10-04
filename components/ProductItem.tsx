@@ -13,7 +13,9 @@ function ProductItemComponent({ product, onAddToWishlist }: ProductItemProps) {
   return (
     <div>
       {product.title} - <strong>{product.price}</strong>
-      <button>Legg til ønskeliste</button>
+      <button onClick={() => onAddToWishlist(product.id)}>
+        Legg til ønskeliste
+      </button>
     </div>
   );
 }
