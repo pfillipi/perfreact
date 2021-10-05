@@ -13,7 +13,7 @@ function ProductItemComponent({ product, onAddToWishlist }: ProductItemProps) {
   return (
     <div>
       {product.title} - <strong>{product.price}</strong>
-      <button></button>
+      <button>Legg til ønskeliste</button>
     </div>
   );
 }
