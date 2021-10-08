@@ -35,7 +35,7 @@ export default function Home() {
         <button type="submit">Søk</button>
       </form>
 
-      <SearchResults results={results} />
+      <SearchResults results={results} onAddToWishlist={addToWishlist} />
     </div>
   );
 }

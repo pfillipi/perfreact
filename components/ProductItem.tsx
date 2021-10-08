@@ -6,6 +6,7 @@ interface ProductItemProps {
     price: number;
     title: string;
   };
+  onAddToWishlist: (id: number) => void;
 }
 
 function ProductItemComponent({ product }: ProductItemProps) {
