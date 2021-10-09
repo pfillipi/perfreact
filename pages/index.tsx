@@ -18,6 +18,10 @@ export default function Home() {
     setResults(data);
   }
 
+  async function addToWishlist(id: number) {
+    console.log(id);
+  }
+
   return (
     <div>
       <h1>Søk</h1>

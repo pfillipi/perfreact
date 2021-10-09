@@ -18,6 +18,7 @@ export function SearchResults({ results }: SearchResultsProps) {
   return (
     <div>
       <h2>{totalPrice}</h2>
+
       {results.map((product) => {
         return <ProductItem product={product} key={product.id} />;
       })}
@@ -42,4 +43,9 @@ export function SearchResults({ results }: SearchResultsProps) {
 
 /**
  * useMemo / useCallback
+ *
+ * 1. tunge beregninger
+ * 2. referansemessing likestilling – når du sender denne informasjonen til den underordnede komponenten
+ *
+ * 3.
  */
