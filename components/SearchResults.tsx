@@ -25,5 +25,6 @@ export function SearchResults({ results }: SearchResultsProps) {
 */
 
 /**
- *
+ * 1. Pure Functional Components
+ * 2. Renders too often
  */
