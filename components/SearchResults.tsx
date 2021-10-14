@@ -23,3 +23,7 @@ export function SearchResults({ results }: SearchResultsProps) {
   * 3. Hvis det er endringer, oppdater dem.
 
 */
+
+/**
+ *
+ */
