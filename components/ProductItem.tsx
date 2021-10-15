@@ -19,6 +19,6 @@ function ProductItemComponent({ product }: ProductItemProps) {
 export const ProductItem = memo(
   ProductItemComponent,
   (prevProps, nextProps) => {
-    return Object.is(prevProps, nextProps);
+    return Object.is(prevProps.product, nextProps.product);
   }
 );
