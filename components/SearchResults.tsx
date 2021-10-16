@@ -11,7 +11,7 @@ export function SearchResults({ results }: SearchResultsProps) {
   return (
     <div>
       {results.map((product) => {
-        return <ProductItem product={product} key={product.id} />;
+        return <ProductItem product={product} />;
       })}
     </div>
   );
