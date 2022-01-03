@@ -1,12 +1,22 @@
-import Head from "next/head";
-import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+
+  function handleSearch() {}
+
   return (
     <div>
-      <main>
-        <h1>Hello World</h1>
-      </main>
+      <h1>Søk</h1>
+
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button type="submit">Søk</button>
+      </form>
     </div>
   );
 }
