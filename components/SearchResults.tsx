@@ -1,5 +1,4 @@
 import { ProductItem } from "./ProductItem";
-
 interface SearchResultsProps {
   results: Array<{
     id: number;
