@@ -8,6 +8,8 @@ interface ProductItemProps {
   };
 }
 
+// shallow compare -> sammenlign flat
+
 function ProductItemComponent({ product }: ProductItemProps) {
   return (
     <div>
