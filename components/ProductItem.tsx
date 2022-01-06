@@ -8,10 +8,6 @@ interface ProductItemProps {
   };
 }
 
-// shallow compare -> sammenlign flat
-// {} === {} // false
-// referansemessig likestilling
-
 function ProductItemComponent({ product }: ProductItemProps) {
   return (
     <div>
