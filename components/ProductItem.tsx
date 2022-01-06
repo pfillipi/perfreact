@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface ProductItemProps {
   product: {
     id: number;
