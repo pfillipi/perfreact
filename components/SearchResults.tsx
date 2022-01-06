@@ -16,3 +16,10 @@ export function SearchResults({ results }: SearchResultsProps) {
     </div>
   );
 }
+
+/** 
+  * 1. Lag en ny versjon av komponenten;
+  * 2. Sammenlign med den fremre versjonen;
+  * 3. Hvis det er endringer, oppdater dem.
+
+*/
