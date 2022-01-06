@@ -9,6 +9,8 @@ interface ProductItemProps {
 }
 
 // shallow compare -> sammenlign flat
+// {} === {} // false
+// referansemessig likestilling
 
 function ProductItemComponent({ product }: ProductItemProps) {
   return (
@@ -18,4 +20,9 @@ function ProductItemComponent({ product }: ProductItemProps) {
   );
 }
 
-export const ProductItem = memo(ProductItemComponent);
+export const ProductItem = memo(
+  ProductItemComponent,
+  (prevProps, nextProps) => {
+    return Object.is(prevProps, nextProps);
+  }
+);
