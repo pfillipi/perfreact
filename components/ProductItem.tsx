@@ -20,10 +20,12 @@ function ProductItemComponent({ product, onAddToWishlist }: ProductItemProps) {
       <button onClick={() => setIsAddingToWishlist(true)}>
         Legg til i favoritter
       </button>
-      <AddProductToWishlist
-        onAddToWishlist={() => onAddToWishlist(product.id)}
-        onRequestClose={() => setIsAddingToWishlist(false)}
-      />
+      {isAddingToWishlist && (
+        <AddProductToWishlist
+          onAddToWishlist={() => onAddToWishlist(product.id)}
+          onRequestClose={() => setIsAddingToWishlist(false)}
+        />
+      )}
     </div>
   );
 }
