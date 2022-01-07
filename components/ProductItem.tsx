@@ -1,6 +1,12 @@
 import { memo, useState } from "react";
-import { AddProductToWishlist } from "./AddProductToWishlist";
+import { AddProductToWishlistProps } from "./AddProductToWishlist";
+import dynamic from "next/dynamic";
 
+const AddProductToWishlist = dynamic<AddProductToWishlistProps>(() => {
+  return import("./AddProductToWishlist").then(
+    (mod) => mod.AddProductToWishlist
+  );
+});
 interface ProductItemProps {
   product: {
     id: number;
