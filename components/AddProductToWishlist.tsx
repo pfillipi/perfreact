@@ -7,5 +7,11 @@ export function AddProductToWishlist({
   onAddToWishlist,
   onRequestClose,
 }: AddProductToWishlistProps) {
-  return <span>Vil du legge til favoritter?</span>;
+  return (
+    <span>
+      Vil du legge til ønskeliste?
+      <button onClick={onAddToWishlist}>Ja</button>
+      <button onClick={onRequestClose}>Nei</button>
+    </span>
+  );
 }

@@ -1,4 +1,5 @@
-import { memo } from "react";
+import { memo, useState } from "react";
+import { AddProductToWishlist } from "./AddProductToWishlist";
 
 interface ProductItemProps {
   product: {
@@ -11,12 +12,15 @@ interface ProductItemProps {
 }
 
 function ProductItemComponent({ product, onAddToWishlist }: ProductItemProps) {
+  const [isAddingToWishlist, setIsAddingToWishlist] = useState(false);
+
   return (
     <div>
       {product.title} - <strong>{product.priceFormatted}</strong>
-      <button onClick={() => onAddToWishlist(product.id)}>
-        Legg til ønskeliste
-      </button>
+      <AddProductToWishlist
+        onAddToWishlist={() => onAddToWishlist(product.id)}
+        onRequestClose={() => setIsAddingToWishlist(false)}
+      />
     </div>
   );
 }
