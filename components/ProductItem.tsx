@@ -17,6 +17,9 @@ function ProductItemComponent({ product, onAddToWishlist }: ProductItemProps) {
   return (
     <div>
       {product.title} - <strong>{product.priceFormatted}</strong>
+      <button onClick={() => setIsAddingToWishlist(true)}>
+        Legg til i favoritter
+      </button>
       <AddProductToWishlist
         onAddToWishlist={() => onAddToWishlist(product.id)}
         onRequestClose={() => setIsAddingToWishlist(false)}
